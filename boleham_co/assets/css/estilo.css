@@ -1,0 +1,433 @@
+/* ============================
+VARIABLES CSS
+   ============================ */
+:root {
+  --color-principal: #6E4FBF;          /* Violeta pastel */
+  --color-secundario: #4A2E7A;         /* Violeta pastel oscuro */
+
+  --color-beige: rgba(250, 240, 235, 0.95);   /* Beige pastel suave */
+  --color-tarjeta: rgba(245, 240, 255, 0.95); /* Lavanda neblina */
+
+  --color-hover-nav: #FFEFAE;          /* Amarillo sparkle */
+  --color-hover-texto: #4A2E7A;        /* Violeta oscuro suave */
+  --color-descuento: #FF8A8A;          /* Rojo pastel */
+
+  --sombra-suave: rgba(110, 79, 191, 0.7);
+  --sombra-fuerte: rgba(0, 0, 0, 0.3);
+
+  --borde-principal: 4px solid var(--color-secundario);
+
+  --transicion-rapida: 0.2s ease;
+  --transicion-media: 0.4s ease;
+}
+
+
+/* ============================
+TEMA DE FONDO (BACKGROUND)
+   ============================ */
+body {
+  background-image: url("../img/branding/boleham_co_tema_claro.png");
+  background-size: 450px;
+  opacity: 0.85;
+  background-repeat: repeat;
+  background-attachment: scroll;
+
+
+}
+
+/* ============================
+   SELECTOR DE ID
+   ============================ */
+   /*SELECTOR DE ID A HEADER*/
+/* Selector de ID aplicado al header */ 
+#header-principal {
+    text-align: center;
+    margin-bottom: 0px; /* Espacio automatico entre header y navegador se asigna a 0 */ 
+    background-color: var(--color-beige); /* Beige con 95% opacidad */
+    border-bottom: var(--borde-principal); /* Borde inferior Verde */
+}
+
+/* Selector de ID aplicado al navegador de la pyme */ 
+#menu-pyme ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /*espacio entre objetos de las listas*/
+    background-color: var(--color-beige);
+    
+}
+
+/* Selector de ID aplicado al navegador principal */ 
+#menu-navegacion ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /*espacio entre objetos de las listas*/
+    background: var(--color-tarjeta);
+    padding: 15px; /* ALTURA REAL DE BARRA */
+    border-bottom: var(--borde-principal); /* Línea profesional */
+    font-size: 1.2rem;
+    margin-top: 0px; /* Espacio automatico entre header y navegador se asigna a 0 */ 
+}
+
+/*SELECTOR DE ID A SUBCATEGORIAS*/
+/* El primer li del menú que contiene el submenú */
+/* 
+  position: relative en el <li> crea un contexto de posicionamiento.
+  Esto permite que el submenú (position: absolute) se ubique 
+  respecto a este <li> y no al body completo.
+*/
+#menu-navegacion ul li {
+    position: relative;
+}
+
+/* Ocultar submenú */
+#menu-navegacion ul li .subcategorias {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-tarjeta);
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+/* Mostrar submenú al pasar el mouse */
+#menu-navegacion ul li:hover .subcategorias {
+    display: block;
+}
+ 
+/*SELECTOR DE ID APLICADO AL BODY*/
+#categorias-principales {
+  margin: 40px auto;
+  text-align: center;
+}
+
+
+/* SELECTOR DE ID APLICADO AL FOOTER */
+#pie-pagina {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    border-top: var(--borde-principal); /* Borde superior  */
+    background-color: var(--color-beige); 
+}
+
+
+
+/* ============================
+   SELECTOR DE CLASE
+   ============================ */
+/* Selector de Clase aplicado al titulo del header*/   
+.titulo-principal {
+    color:var(--color-secundario);
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px var(--sombra-suave); /* Sombra purpura */
+}
+
+/* Selector de clase aplicado al contenedor del logo+nombre pyme */ 
+.header-contenedor {
+  display: flex;
+  justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+  align-items: center;            /* Centrado vertical */
+  padding: 10px 20px;
+}
+/* Selector de Clase aplicado al logo del header*/  
+.logo-boleham-co {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0px auto;
+    cursor: pointer; /* Efecto manito */
+}
+
+/* Selector de Clase aplicado al navegador principal*/  
+.link-nav {
+    
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/*Selector de clase aplicado a categorías*/
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+.categoria {
+  background: var(--color-tarjeta);
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform var(--transicion-media), box-shadow var(--transicion-media);
+}
+
+.categoria img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.categoria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px var(--color-secundario);
+}
+
+.categoria h3 {
+  margin-top: 10px;
+  color: var(--color-principal);
+  font-weight: bold;
+}
+
+/*Selector de clase aplicado al titulo de los artículos*/
+.titulo-articulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-secundario); 
+  margin: 40px 0 25px;
+  text-shadow: 2px 2px 8px var(--sombra-fuerte);
+  letter-spacing: 1px;
+}
+
+
+
+/* Selector de Clase aplicado a las tarjetas de los articulos*/  
+.tarjeta-destacado {
+
+    padding: 20px;
+    border-left: 8px solid var(--color-secundario); /* Púrpura  */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: var(--color-tarjeta);
+}
+
+/* Pseudoclase */
+/* Selector aplicado al estar sobre de navegador*/  
+.link-nav:hover {
+    background-color:var(--color-hover-nav); /* Amarillo  */
+    color:var(--color-hover-texto); /* Naranjo  */
+}
+
+/* Selector aplicado cuando se hace click en el enlace */
+.link-nav:active {
+    background-color: var(--color-principal); /* Púrpura  */
+    color: var(--color-hover-nav); /* Amarillo  */
+}
+
+/* Pseudoelemento*/
+/* brillito antes del titulo de los articulos*/
+article h2::before {
+    content: "✨ ";
+    font-weight: bold;
+
+}
+
+
+/* ============================
+   SELECTOR DE ATRIBUTO
+   ============================ */
+a[href] {
+    color: var(--color-principal); 
+    font-weight: bold;
+    
+}
+
+p[class="aviso-derechos"]{
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+
+
+/* ============================
+   SECCIÓN DE CATEGORÍA
+   ============================ */
+
+.seccion-categoria {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.descripcion-categoria {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--color-secundario);
+}
+
+/* ============================
+   GRID DE PRODUCTOS
+   ============================ */
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+/* ============================
+   TARJETAS DE PRODUCTO
+   ============================ */
+
+.card-producto {
+  background: var(--color-beige);
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 4px 12px var(--color-principal);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px var(--sombra-fuerte);
+}
+
+/* Imagen del producto */
+.img-producto {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Información del producto */
+.nombre-producto {
+  color: var(--color-principal);
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.descripcion-producto {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: var(--color-secundario);
+}
+
+.precio-producto {
+  font-weight: bold;
+  color: var(--color-hover-texto);
+  font-size: 1.2rem;
+}
+
+.descuento-producto {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.con-descuento {
+  color: var(--sombra-suave);
+}
+
+.sin-descuento {
+  color: var(--sombra-fuerte);
+}
+
+/* ============================
+   NAVEGACIÓN INTERNA ENTRE CATEGORÍAS
+   ============================ */
+
+.nav-interna {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.btn-volver,
+.btn-siguiente {
+  background-color: var(--color-tarjeta);
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color var(--transicion-rapida), transform var(--transicion-rapida);
+}
+
+.btn-volver:hover,
+.btn-siguiente:hover {
+  background-color: var(--color-secundario);
+  transform: translateY(-3px);
+}
+
+.btn-volver:active,
+.btn-siguiente:active {
+  transform: translateY(0);
+}
+
+/* ============================
+RESPONSIVIDAD
+============================ */
+
+/* TABLET (pantallas medianas) */
+@media (max-width: 992px) {
+
+  /* Logo más pequeño */
+  .logo-boleham-co {
+    width: 150px;
+  }
+
+  /* Menú más compacto */
+  #menu-navegacion ul {
+    gap: 25px;
+    font-size: 1rem;
+  }
+
+  /* Grid de categorías → 2 columnas */
+  .grid-categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Grid de productos → 2 columnas */
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULAR (pantallas pequeñas) */
+@media (max-width: 480px) {
+
+  /* Header en columna */
+  .header-contenedor {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Logo más pequeño */
+  .logo-boleham-co {
+    width: 130px;
+  }
+
+  /* Menú vertical */
+  #menu-navegacion ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  /* Grid de categorías → 1 columna */
+  .grid-categorias {
+    grid-template-columns: 1fr;
+  }
+
+  /* Grid de productos → 1 columna */
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Títulos más pequeños */
+  .titulo-articulo {
+    font-size: 1.6rem;
+  }
+
+  /* Botones internos más compactos */
+  .btn-volver,
+  .btn-siguiente {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
