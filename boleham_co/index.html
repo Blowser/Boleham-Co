@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<!-- 
+  lang="es": Indica que el contenido está en español.
+  Mejora accesibilidad (lectores de pantalla) y SEO (indexación por idioma).
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 
+    charset="UTF-8": Permite usar tildes, ñ y caracteres especiales sin problemas.
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- 
+    viewport: Activa el diseño responsivo en móviles.
+    width=device-width: Usa el ancho real del dispositivo.
+    initial-scale=1.0: Evita zoom automático y mantiene proporción correcta.
+  -->
+
+  <title>Boleham & Co</title>
+
+  <link rel="stylesheet" href="assets/css/estilo.css"> 
+  <!-- 
+    Vincula el archivo CSS donde estarán los estilos del sitio.
+  -->
+</head>
+
+<body>
+
+  <header id="header-principal">
+      <!-- 
+        El header suele contener el logo, título y navegación principal.
+      -->    
+    <div class="header-contenedor">
+    <a href="index.html">
+      <img src="assets/img/branding/boleham_co_logo.png" alt="Logo Boleham & Co." class="logo-boleham-co">
+    </a>
+      <h1 class="titulo-principal">Libros, Comics, Mangas & más</h1>
+    
+
+      <nav id="menu-pyme">
+          <!-- 
+            nav: Sección destinada a enlaces de navegación.
+            ul/li/a: Lista de enlaces a otras páginas del sitio.
+          -->
+          <ul>
+              <li><a class="link-nav" href="#/">Nuestras redes</a></li>
+              <li><a class="link-nav" href="#/">Contacto</a></li>
+              <li><a class="link-nav" href="#/">Registrarse / Iniciar sesion</a></li>
+              <li><a class="link-nav" href="#/">Ver carrito</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
+        <nav id="menu-navegacion">
+          <!-- 
+            nav: Sección destinada a enlaces de navegación.
+            ul/li/a: Lista de enlaces a otras páginas del sitio.
+          -->
+          <ul>
+              <li><a class="link-nav" href="index.html">Inicio</a>
+              </li>
+
+              <li><a class="link-nav" href="#/">Categorías</a>
+                <ul class="subcategorias">
+                  <li><a href="categorias/comics-libros.html">Libros & Comics</a></li>
+                  <li><a href="categorias/arte-materiales.html">Arte & Materiales</a></li>
+                  <li><a href="categorias/plushies-figuras.html">Plushies & Figuras</a></li>
+                  <li><a href="categorias/accesorios.html">Accesorios</a></li>
+                </ul>
+              </li>
+
+              <li><a class="link-nav" href="#/">Mi cuenta</a>
+              </li>
+
+              <li><a class="link-nav" href="#/">Visítanos</a>                
+              </li>    
+              
+              <li><a class="link-nav" href="#/">Wishlist</a>                
+              </li> 
+          </ul>
+      </nav>
+  
+<main id="contenido">
+
+  <section id="categorias-principales">
+    <h2 class="titulo-articulo">Elegir Categoría</h2>
+
+    <div class="grid-categorias">
+
+      <article class="categoria">
+        <a href="categorias/comics-libros.html">
+          <img src="assets/img/categorias/boleham_co_comics-libros.jpg" alt="Cómics y Libros">
+          <h3>Cómics & Libros</h3>
+        </a>
+      </article>
+
+      <article class="categoria">
+        <a href="categorias/arte-materiales.html">
+          <img src="assets/img/categorias/boleham_co_arte-materiales.jpg" alt="Arte y Materiales">
+          <h3>Arte & Materiales</h3>
+        </a>
+      </article>
+
+      <article class="categoria">
+        <a href="categorias/plushies-figuras.html">
+          <img src="assets/img/categorias/boleham_co_plushies-figuras.jpg" alt="Plushies y Figuras">
+          <h3>Plushies & Figuras</h3>
+        </a>
+      </article>
+
+      <article class="categoria">
+        <a href="categorias/accesorios.html">
+          <img src="assets/img/categorias/boleham_co_accesorios.jpg" alt="Accesorios">
+          <h3>Accesorios</h3>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <article class="tarjeta-destacado">
+    <h2 class="titulo-articulo">Nuevos Productos</h2>
+    <p>Este es el primer artículo de la página.</p>
+  </article>
+
+  <article class="tarjeta-destacado">
+    <h2 class="titulo-articulo">Ofertas</h2>
+    <p>Este es el segundo artículo de la página.</p>
+  </article>
+
+  <article class="tarjeta-destacado">
+    <h2 class="titulo-articulo">Eventos</h2>
+    <p>Este es el tercer artículo de la página.</p>
+  </article>
+
+</main>
+
+
+  <footer id="pie-pagina">
+      <p class="aviso-derechos">Derechos de autor © 2026 Boleham & Co.</p>
+      <!-- 
+        footer: Información final del sitio.
+        Suele incluir derechos, enlaces secundarios o contacto.
+      -->
+  </footer>
+
+</body>
+</html>
