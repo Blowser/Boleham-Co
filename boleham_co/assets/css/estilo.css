@@ -430,4 +430,94 @@ RESPONSIVIDAD
 }
 
 
+/* ============================
+ANIMACIONES
+============================ */
+/*La tarjeta empieza 30px más abajo de su posición real e invisible.*/
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.aparecer {
+  opacity: 0;
+  animation: aparecer 1.5s ease forwards;
+}
+
+/* Animación del logo: aparece suave, crece un poco y se estabiliza */
+@keyframes aparecerLogo {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo-boleham-co {
+  animation: aparecerLogo 1.5s ease-out forwards;
+}
+
+/* Animación lateral desde la izquierda */
+@keyframes aparecerLadoIzquierdo {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Clase para aplicar la animación */
+.aparecer-lado {
+  opacity: 0;
+  animation: aparecerLadoIzquierdo 1.5s ease forwards;
+}
+
+/* Animación de pulso suave para botones */
+/* 
+  pulsoBoton:
+  El botón comienza en su tamaño normal (scale 1),
+  luego crece suavemente un 5% (scale 1.05),
+  y vuelve a su tamaño original.
+  Esto crea un "latido" suave, pastel y profesional.
+*/
+@keyframes pulsoBoton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Clase para activar la animación en botones */
+.boton-animado {
+  animation: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 
+  Al pasar el mouse:
+  Se activa el pulso suave durante 1.5 segundos,
+  con una curva ease para que se sienta natural.
+*/
+.boton-animado:hover {
+  animation: pulsoBoton 1.5s ease;
+}
 
