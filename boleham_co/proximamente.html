@@ -28,19 +28,24 @@
       margin-bottom: 40px;
     }
 
-    .btn-volver-inicio {
-      background: var(--color-tarjeta);
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s ease;
+    .img-proximamente {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px var(--sombra-suave);
+      margin: 30px auto;
+      display: block;
+      animation: aparecer 1.5s ease forwards;
     }
 
-    .btn-volver-inicio:hover {
-      background: var(--color-secundario);
-      color: white;
-      transform: translateY(-3px);
+    /* solo para este botón en esta página */
+    .btn-volver {
+      text-decoration: none;
+    }
+
+    /* aseguramos que el botón animado se comporte como bloque */
+    .boton-animado {
+      display: inline-block;
     }
   </style>
 </head>
@@ -51,7 +56,13 @@
     <h1>✨ Próximamente ✨</h1>
     <p>Estamos trabajando en esta sección para traerte más magia de Boleham & Co.</p>
 
-    <a href="index.html" class="btn-volver-inicio">⬅ Volver al inicio</a>
+    <img src="assets/img/branding/boleham_co_proximamente.jpg" 
+         alt="Página en construcción Boleham & Co" 
+         class="img-proximamente">
+
+    <a href="index.html" class="btn-volver boton-animado">
+      ⬅ Volver al inicio
+    </a>
   </div>
 
 </body>
