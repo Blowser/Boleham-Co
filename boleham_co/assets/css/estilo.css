@@ -6,7 +6,7 @@ VARIABLES CSS
   --color-secundario: #4A2E7A;         /* Violeta pastel oscuro */
 
   --color-beige: rgba(250, 240, 235, 0.95);   /* Beige pastel suave */
-  --color-tarjeta: rgba(245, 240, 255, 0.95); /* Lavanda neblina */
+  --color-tarjeta: rgba(235, 230, 250, 0.80); /* Lavanda neblina */
 
   --color-hover-nav: #FFEFAE;          /* Amarillo sparkle */
   --color-hover-texto: #4A2E7A;        /* Violeta oscuro suave */
@@ -27,7 +27,7 @@ TEMA DE FONDO (BACKGROUND)
    ============================ */
 body {
   background-image: url("../img/branding/boleham_co_tema_claro.png");
-  background-size: 450px;
+  background-size: 500px;
   opacity: 0.85;
   background-repeat: repeat;
   background-attachment: scroll;
@@ -516,9 +516,12 @@ ANIMACIONES
 
 /* Botón base */
 .boton-animado {
+  color: var(--color-secundario); /* Texto visible */
+  font-weight: bold;
+  border: 2px solid var(--color-secundario); /* Borde pastel */
   border-radius: 10px;
   padding: 10px 18px;
-  background: var(--color-tarjeta);
+  background: var(--color-beige);
   transition: background-color 0.3s ease, color 0.3s ease;
   position: relative; /* NECESARIO para que el glow se vea */
   z-index: 1;
