@@ -280,11 +280,15 @@ p[class="aviso-derechos"]{
   box-shadow: 0 4px 12px var(--color-principal);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.card-producto-contenido {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-.card-producto:hover {
+.card-producto-contenido:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px var(--sombra-fuerte);
 }
+
 
 /* Imagen del producto */
 .img-producto {
