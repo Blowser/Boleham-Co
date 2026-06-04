@@ -75,8 +75,14 @@ body {
   Esto permite que el submenú (position: absolute) se ubique 
   respecto a este <li> y no al body completo.
 */
+#menu-navegacion {
+  position: relative;
+  z-index: 9999;
+}
+
 #menu-navegacion ul li {
     position: relative;
+    z-index: 9999;
 }
 
 /* Ocultar submenú */
@@ -148,13 +154,7 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
 }
-/*Selector de clase aplicado a categorías*/
-.grid-categorias {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  padding: 20px;
-}
+
 
 .categoria {
   background: var(--color-tarjeta);
@@ -259,17 +259,6 @@ p[class="aviso-derechos"]{
 }
 
 /* ============================
-   GRID DE PRODUCTOS
-   ============================ */
-
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 20px;
-}
-
-/* ============================
    TARJETAS DE PRODUCTO
    ============================ */
 
@@ -366,28 +355,35 @@ RESPONSIVIDAD
 
 /* TABLET (pantallas medianas) */
 @media (max-width: 992px) {
+  .header-contenedor {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* Header en columna */
+
+
+  /* Menú pyme vertical */
+  #menu-pyme ul {
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap; /* evita que se corte "Ver carrito" */
+  }
 
   /* Logo más pequeño */
   .logo-boleham-co {
     width: 150px;
   }
 
-  /* Menú más compacto */
+  /* Menú principal más compacto */
   #menu-navegacion ul {
     gap: 25px;
     font-size: 1rem;
   }
 
-  /* Grid de categorías → 2 columnas */
-  .grid-categorias {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Grid de productos → 2 columnas */
-  .grid-productos {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
+
 
 /* CELULAR (pantallas pequeñas) */
 @media (max-width: 480px) {
@@ -408,16 +404,6 @@ RESPONSIVIDAD
     flex-direction: column;
     gap: 15px;
     padding: 10px;
-  }
-
-  /* Grid de categorías → 1 columna */
-  .grid-categorias {
-    grid-template-columns: 1fr;
-  }
-
-  /* Grid de productos → 1 columna */
-  .grid-productos {
-    grid-template-columns: 1fr;
   }
 
   /* Títulos más pequeños */
