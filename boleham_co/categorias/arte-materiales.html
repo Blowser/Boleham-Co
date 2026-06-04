@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boleham & Co - Arte & Materiales</title>
 
+  <!-- SE AÑADE BOOTSTRAP Y ESTILOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <link rel="stylesheet" href="../assets/css/estilo.css">
 </head>
 
@@ -64,64 +68,85 @@
       <p class="descripcion-categoria">
         Encuentra materiales de arte seleccionados con cariño para artistas, ilustradores y amantes del dibujo.
       </p>
-<div class="nav-interna">
-  <a href="comics-libros.html" class="btn-volver boton-animado">⬅ Volver a Cómics & Libros</a>
-  <a href="plushies-figuras.html" class="btn-siguiente boton-animado">Ir a Plushies & Figuras ➜</a>
-</div>
 
-      <!-- GRID DE PRODUCTOS -->
-      <div class="grid-productos">
-
-        <!-- Producto 1 -->
-        <article class="card-producto aparecer">
-          <div class="card-producto-contenido">
-            <img src="../assets/img/productos/royal_talens_ecoline_set_30_marcadores_brush_pen.webp" onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" alt="Royal Talens Ecoline Set 30" class="img-producto">
-
-            <h3 class="nombre-producto">Royal Talens Ecoline - Set 30 Marcadores Brush Pen</h3>
-
-            <p class="descripcion-producto">
-              Las populares pinturas acuarela Ecoline ahora vienen en formato Lápiz Pincel. Los Sets Brush Pen contienen acuarela concentrada y transparente.
-            </p>
-
-            <p class="precio-producto">$104.990</p>
-            <p class="descuento-producto con-descuento">$102.990</p>
-          </div>
-        </article>
-
-        <!-- Producto 2 -->
-        <article class="card-producto aparecer">
-          <div class="card-producto-contenido">
-            <img src="../assets/img/productos/Pentel_Arts_Aquash_Water_Brushes_Set_de_4.jpg" onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" alt="Pentel Arts Aquash Water Brushes Set 4" class="img-producto">
-
-            <h3 class="nombre-producto">Pentel Arts Aquash Water Brushes - Set de 4 (Fino, Medio, Grande y Plano)</h3>
-
-            <p class="descripcion-producto">
-              El Aquash Waterbrush es un pincel sintético unido por una válvula de retención que puede ser llenado con agua o tinta. Ideal para mezclar lapices acuarelables o acuarelas, gouache o tinta.
-
-  El set incluye 4 tipos de puntas: Punta fina, mediana, grande y plana.       </p>
-
-            <p class="precio-producto">$8.990</p>
-            <p class="descuento-producto sin-descuento">Sin descuento</p>
-          </div>
-        </article>
-
-        <!-- Producto 3 -->
-        <article class="card-producto aparecer">
-          <div class="card-producto-contenido">
-            <img src="../assets/img/productos/hahnemuhle_toned_watercolour_book_sketchbook_papel_beige.webp" onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" alt="Hahnemühle Toned Watercolour Book 30 Hojas 200g/m2" class="img-producto">
-
-            <h3 class="nombre-producto">Hahnemühle Toned Watercolour Book - Sketchbook Papel Beige 30 Hojas 200 g/m2 </h3>
-
-            <p class="descripcion-producto">
-              Los Sketchbooks Toned Watercolour de Hahnemühle contienen un papel de acuarela en tonos suaves con una superficie de grano fino y uniforme en ambos lados, brindando un fondo natural para tus obras de arte. Estas libretas están disponibles en papel de acuarela gris o beige. Aptos para todas las técnicas húmedas.
-            </p>
-
-            <p class="precio-producto">$15.990  </p>
-            <p class="descuento-producto con-descuento">$13.990</p>
-          </div>
-        </article>
-
+      <!-- NAVEGACIÓN INTERNA -->
+      <div class="nav-interna">
+        <a href="comics-libros.html" class="btn-volver boton-animado">⬅ Volver a Cómics & Libros</a>
+        <a href="plushies-figuras.html" class="btn-siguiente boton-animado">Ir a Plushies & Figuras ➜</a>
       </div>
+
+      <!-- ============================
+           GRID DE PRODUCTOS CON BOOTSTRAP
+           ============================ -->
+      <div class="container">
+        <div class="row g-4">
+
+          <!-- Producto 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card-producto aparecer">
+              <div class="card-producto-contenido">
+                <img src="../assets/img/productos/royal_talens_ecoline_set_30_marcadores_brush_pen.webp"
+                     onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'"
+                     alt="Royal Talens Ecoline Set 30"
+                     class="img-producto">
+
+                <h3 class="nombre-producto">Royal Talens Ecoline - Set 30 Marcadores Brush Pen</h3>
+
+                <p class="descripcion-producto">
+                  Las populares pinturas acuarela Ecoline ahora vienen en formato Lápiz Pincel. Los Sets Brush Pen contienen acuarela concentrada y transparente.
+                </p>
+
+                <p class="precio-producto">$104.990</p>
+                <p class="descuento-producto con-descuento">$102.990</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card-producto aparecer">
+              <div class="card-producto-contenido">
+                <img src="../assets/img/productos/Pentel_Arts_Aquash_Water_Brushes_Set_de_4.jpg"
+                     onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'"
+                     alt="Pentel Arts Aquash Water Brushes Set 4"
+                     class="img-producto">
+
+                <h3 class="nombre-producto">Pentel Arts Aquash Water Brushes - Set de 4 (Fino, Medio, Grande y Plano)</h3>
+
+                <p class="descripcion-producto">
+                  El Aquash Waterbrush es un pincel sintético unido por una válvula de retención que puede ser llenado con agua o tinta. Ideal para mezclar lápices acuarelables, acuarelas, gouache o tinta.
+                </p>
+
+                <p class="precio-producto">$8.990</p>
+                <p class="descuento-producto sin-descuento">Sin descuento</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card-producto aparecer">
+              <div class="card-producto-contenido">
+                <img src="../assets/img/productos/hahnemuhle_toned_watercolour_book_sketchbook_papel_beige.webp"
+                     onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'"
+                     alt="Hahnemühle Toned Watercolour Book"
+                     class="img-producto">
+
+                <h3 class="nombre-producto">Hahnemühle Toned Watercolour Book - Sketchbook Papel Beige 30 Hojas 200 g/m2</h3>
+
+                <p class="descripcion-producto">
+                  Los Sketchbooks Toned Watercolour de Hahnemühle contienen un papel de acuarela en tonos suaves con una superficie de grano fino y uniforme en ambos lados, brindando un fondo natural para tus obras de arte.
+                </p>
+
+                <p class="precio-producto">$15.990</p>
+                <p class="descuento-producto con-descuento">$13.990</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+
     </section>
 
   </main>
