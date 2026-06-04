@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boleham & Co - Cómics & Libros</title>
 
+  <!-- SE AÑADE BOOTSTRAP Y ESTILOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <link rel="stylesheet" href="../assets/css/estilo.css">
 </head>
 
@@ -71,57 +75,78 @@
         <a href="arte-materiales.html" class="btn-siguiente boton-animado">Ir a Arte & Materiales ➜</a>
       </div>
       
-      <!-- GRID DE PRODUCTOS -->
-      <div class="grid-productos">
+      <!-- ============================
+           GRID DE PRODUCTOS CON BOOTSTRAP
+           ============================ -->
+      <div class="container">
+        <div class="row g-4">
 
-        <!-- Producto 1 -->
-        <article class="card-producto aparecer">
-          <div class="card-producto-contenido">
-            <img src="../assets/img/productos/los_diarios_de_la_boticaria_01.jpg" onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" alt="Los diarios de la boticaria" class="img-producto">
+          <!-- Producto 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card-producto aparecer">
+              <div class="card-producto-contenido">
+                <img src="../assets/img/productos/los_diarios_de_la_boticaria_01.jpg" 
+                     onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" 
+                     alt="Los diarios de la boticaria" 
+                     class="img-producto">
 
-            <h3 class="nombre-producto">Manhua: Los diarios de la boticaria</h3>
+                <h3 class="nombre-producto">Manhua: Los diarios de la boticaria</h3>
 
-            <p class="descripcion-producto">
-              Una joven llamada Maomao trabaja como sirvienta en la corte imperial de la China medieval.
-            </p>
+                <p class="descripcion-producto">
+                  Una joven llamada Maomao trabaja como sirvienta en la corte imperial de la China medieval.
+                </p>
 
-            <p class="precio-producto">$15.490</p>
-            <p class="descuento-producto con-descuento">$14.240</p>
+                <p class="precio-producto">$15.490</p>
+                <p class="descuento-producto con-descuento">$14.240</p>
+              </div>
+            </article>
           </div>
-        </article>
 
-        <!-- Producto 2 -->
-        <article class="card-producto aparecer">
-          <div class="card-producto-contenido">
-            <img src="../assets/img/productos/solo_leveling_01.webp" onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" alt="aaaa" class="img-producto">
+          <!-- Producto 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card-producto aparecer">
+              <div class="card-producto-contenido">
+                <img src="../assets/img/productos/solo_leveling_01.webp" 
+                     onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" 
+                     alt="Solo Leveling" 
+                     class="img-producto">
 
-            <h3 class="nombre-producto">Manhwa: Solo levelig</h3>
+                <h3 class="nombre-producto">Manhwa: Solo leveling</h3>
 
-            <p class="descripcion-producto">
-              ¡Adéntrate en el fascinante mundo de «Solo Leveling», un emocionante manhwa que te transportará a través de puertas dimensionales.
-            </p>
+                <p class="descripcion-producto">
+                  ¡Adéntrate en el fascinante mundo de «Solo Leveling», un emocionante manhwa que te transportará a través de puertas dimensionales.
+                </p>
 
-            <p class="precio-producto">$24.990</p>
-            <p class="descuento-producto sin-descuento">Sin descuento</p>
+                <p class="precio-producto">$24.990</p>
+                <p class="descuento-producto sin-descuento">Sin descuento</p>
+              </div>
+            </article>
           </div>
-        </article>
 
-        <!-- Producto 3 -->
-        <article class="card-producto aparecer">
-          <div class="card-producto-contenido">
-            <img src="../assets/img/productos/dan_da_dan_01.webp" onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" alt="Dan da Dan" class="img-producto">
+          <!-- Producto 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card-producto aparecer">
+              <div class="card-producto-contenido">
+                <img src="../assets/img/productos/dan_da_dan_01.webp" 
+                     onerror="this.onerror=null; this.src='../assets/img/productos/boleham_co_placeholder.jpg'" 
+                     alt="Dan da Dan" 
+                     class="img-producto">
 
-            <h3 class="nombre-producto">Manga: Dan da Dan</h3>
+                <h3 class="nombre-producto">Manga: Dan da Dan</h3>
 
-            <p class="descripcion-producto">
-              Sumérgete en una historia única de extraterrestres y fantasmas que te mantendrá enganchado desde el primer capítulo.
-            </p>
+                <p class="descripcion-producto">
+                  Sumérgete en una historia única de extraterrestres y fantasmas que te mantendrá enganchado desde el primer capítulo.
+                </p>
 
-            <p class="precio-producto">$9.990</p>
-            <p class="descuento-producto con-descuento">$9.490</p>
+                <p class="precio-producto">$9.990</p>
+                <p class="descuento-producto con-descuento">$9.490</p>
+              </div>
+            </article>
           </div>
-        </article>
+
+        </div>
       </div>
+
     </section>
 
   </main>
