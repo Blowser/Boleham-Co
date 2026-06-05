@@ -6,7 +6,7 @@ VARIABLES CSS
   --color-secundario: #4A2E7A;         /* Violeta pastel oscuro */
 
   --color-beige: rgba(250, 240, 235, 0.95);   /* Beige pastel suave */
-  --color-tarjeta: rgba(235, 230, 250, 0.80); /* Lavanda neblina */
+  --color-tarjeta: rgba(235, 230, 250, 0.85); /* Lavanda neblina */
 
   --color-hover-nav: #FFEFAE;          /* Amarillo sparkle */
   --color-hover-texto: #4A2E7A;        /* Violeta oscuro suave */
