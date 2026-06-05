@@ -42,43 +42,66 @@
       <div class="mb-3">
         <label class="form-label">Nombre completo</label>
         <input type="text" id="nombre" class="form-control" placeholder="Ej: Ignacio Pérez">
+
+        <div class="invalid-feedback">El nombre es demasiado corto.</div>
+        <div class="valid-feedback">Nombre válido ✨</div>
       </div>
 
       <!-- USUARIO -->
       <div class="mb-3">
         <label class="form-label">Nombre de usuario</label>
         <input type="text" id="usuario" class="form-control" placeholder="Ej: NachoGamer">
+
+        <div class="invalid-feedback">El usuario debe tener al menos 3 caracteres.</div>
+        <div class="valid-feedback">Usuario válido ✨</div>
       </div>
 
       <!-- CORREO -->
       <div class="mb-3">
         <label class="form-label">Correo electrónico</label>
         <input type="email" id="correo" class="form-control" placeholder="correo@ejemplo.com">
+
+        <div class="invalid-feedback">Ingresa un correo válido.</div>
+        <div class="valid-feedback">Correo válido ✨</div>
       </div>
 
       <!-- FECHA DE NACIMIENTO -->
       <div class="mb-3">
         <label class="form-label">Fecha de nacimiento</label>
         <input type="date" id="fecha-nacimiento" class="form-control">
+
+        <div class="invalid-feedback">Debes tener al menos 13 años.</div>
+        <div class="valid-feedback">Fecha válida ✨</div>
       </div>
 
       <!-- DIRECCIÓN (OPCIONAL) -->
       <div class="mb-3">
         <label class="form-label">Dirección de despacho (opcional)</label>
         <input type="text" id="direccion" class="form-control" placeholder="Ej: Calle 123, Valparaíso">
+
+        <div class="valid-feedback">Dirección añadida ✨</div>
       </div>
 
       <!-- CONTRASEÑA -->
       <div class="mb-3">
         <label class="form-label">Contraseña</label>
         <input type="password" id="password" class="form-control" placeholder="Mínimo 6 caracteres">
+
+        <div class="invalid-feedback">
+          La contraseña debe tener entre 6 y 18 caracteres, una mayúscula y un número.
+        </div>
+        <div class="valid-feedback">Contraseña segura ✨</div>
       </div>
 
       <!-- CONFIRMAR CONTRASEÑA -->
       <div class="mb-3">
         <label class="form-label">Confirmar contraseña</label>
         <input type="password" id="password2" class="form-control" placeholder="Repite tu contraseña">
+
+        <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+        <div class="valid-feedback">Coinciden ✨</div>
       </div>
+
 
       <!-- BOTONES -->
       <div class="d-flex gap-3 mt-4">
