@@ -19,13 +19,14 @@
   <!-- HEADER -->
   <header id="header-principal">
     <div class="header-contenedor">
-     <a href="../index.html">  
-      <img src="../assets/img/branding/boleham_co_logo.png" 
-        alt="Boleham & Co" 
-        class="logo-boleham-co">
-     </a>
 
-        <h1 class="titulo-principal">Registrar cuenta</h1>
+      <a href="../index.html">
+        <img src="../assets/img/branding/boleham_co_logo.png" 
+             alt="Boleham & Co" 
+             class="logo-boleham-co">
+      </a>
+
+      <h1 class="titulo-principal">Registrar cuenta</h1>
     </div>
   </header>
 
@@ -37,36 +38,58 @@
 
       <h2 class="text-center mb-4 titulo-articulo">Únete a Boleham & Co ✨</h2>
 
+      <!-- NOMBRE COMPLETO -->
       <div class="mb-3">
         <label class="form-label">Nombre completo</label>
         <input type="text" id="nombre" class="form-control" placeholder="Ej: Ignacio Pérez">
       </div>
 
+      <!-- USUARIO -->
+      <div class="mb-3">
+        <label class="form-label">Nombre de usuario</label>
+        <input type="text" id="usuario" class="form-control" placeholder="Ej: NachoGamer">
+      </div>
+
+      <!-- CORREO -->
       <div class="mb-3">
         <label class="form-label">Correo electrónico</label>
         <input type="email" id="correo" class="form-control" placeholder="correo@ejemplo.com">
       </div>
 
+      <!-- FECHA DE NACIMIENTO -->
+      <div class="mb-3">
+        <label class="form-label">Fecha de nacimiento</label>
+        <input type="date" id="fecha-nacimiento" class="form-control">
+      </div>
+
+      <!-- DIRECCIÓN (OPCIONAL) -->
+      <div class="mb-3">
+        <label class="form-label">Dirección de despacho (opcional)</label>
+        <input type="text" id="direccion" class="form-control" placeholder="Ej: Calle 123, Valparaíso">
+      </div>
+
+      <!-- CONTRASEÑA -->
       <div class="mb-3">
         <label class="form-label">Contraseña</label>
         <input type="password" id="password" class="form-control" placeholder="Mínimo 6 caracteres">
       </div>
 
+      <!-- CONFIRMAR CONTRASEÑA -->
       <div class="mb-3">
         <label class="form-label">Confirmar contraseña</label>
         <input type="password" id="password2" class="form-control" placeholder="Repite tu contraseña">
       </div>
 
-    <div class="d-flex gap-3 mt-4">
-    <button type="submit" class="boton-animado w-50">
-        Registrarse ✨
-    </button>
+      <!-- BOTONES -->
+      <div class="d-flex gap-3 mt-4">
+        <button type="submit" class="boton-animado w-50">
+          Registrarse ✨
+        </button>
 
-    <button type="reset" class="boton-animado w-50">
-        Limpiar 🧹
-    </button>
-    </div>
-
+        <button type="reset" class="boton-animado w-50">
+          Limpiar 🧹
+        </button>
+      </div>
 
       <p id="mensaje" class="mt-3 fw-bold text-center"></p>
 
@@ -81,45 +104,8 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- VALIDACIONES BÁSICAS -->
-  <script>
-    document.getElementById("form-registro").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const nombre = document.getElementById("nombre").value.trim();
-      const correo = document.getElementById("correo").value.trim();
-      const pass = document.getElementById("password").value.trim();
-      const pass2 = document.getElementById("password2").value.trim();
-      const mensaje = document.getElementById("mensaje");
-
-      if (nombre.length < 3) {
-        mensaje.textContent = "⚠ El nombre es demasiado corto.";
-        mensaje.style.color = "red";
-        return;
-      }
-
-      if (!correo.includes("@") || !correo.includes(".")) {
-        mensaje.textContent = "⚠ Ingresa un correo válido.";
-        mensaje.style.color = "red";
-        return;
-      }
-
-      if (pass.length < 6) {
-        mensaje.textContent = "⚠ La contraseña debe tener al menos 6 caracteres.";
-        mensaje.style.color = "red";
-        return;
-      }
-
-      if (pass !== pass2) {
-        mensaje.textContent = "⚠ Las contraseñas no coinciden.";
-        mensaje.style.color = "red";
-        return;
-      }
-
-      mensaje.textContent = "✔ Registro exitoso. Bienvenido a Boleham & Co ✨";
-      mensaje.style.color = "green";
-    });
-  </script>
+  <!-- VALIDACIONES EXTERNAS -->
+  <script src="../assets/js/validaciones.js"></script>
 
 </body>
 </html>
