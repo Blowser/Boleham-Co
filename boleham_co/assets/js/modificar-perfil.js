@@ -1,5 +1,5 @@
 // ======================================================================
-// modificar_perfil.js — Editar datos del usuario logueado
+// modificar-perfil.js — Editar datos del usuario logueado
 // Funciona junto a app.js y validaciones.js
 // ======================================================================
 
