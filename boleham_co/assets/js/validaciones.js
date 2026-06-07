@@ -289,7 +289,7 @@ if (formRegistro) {
       usuario,
       correo,
       password: pass,
-      rol: "consulta", // todos los registrados son usuarios normales
+      rol: "normal", // todos los registrados son usuarios normales
       direccion
     };
 
