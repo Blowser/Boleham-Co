@@ -144,7 +144,7 @@ function protegerAdmin() {
 function protegerUsuario() {
   const sesion = obtenerSesion();
 
-  if (!sesion || sesion.rol !== "consulta") {
+  if (!sesion || sesion.rol !== "normal") {
     alert("Acceso restringido para usuarios normales.");
     window.location.href = "login.html";
   }
