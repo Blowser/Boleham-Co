@@ -32,7 +32,7 @@ if (sesion) {
   perfilUsuario.textContent = sesion.usuario;
   perfilCorreo.textContent = sesion.correo;
   perfilDireccion.textContent = sesion.direccion || "No registrada";
-  perfilRol.textContent = sesion.rol === "consulta" ? "Usuario normal" : "Administrador";
+  perfilRol.textContent = sesion.rol === "normal" ? "Usuario normal" : "Administrador";
 }
 
 
