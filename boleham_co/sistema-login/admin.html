@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel admin - Boleham & Co</title>
+
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+
+  <header id="header-principal">
+    <div class="header-contenedor">
+      <a href="../index.html">
+        <img src="../assets/img/branding/boleham_co_logo.png" 
+             alt="Boleham & Co" 
+             class="logo-boleham-co">
+      </a>
+      <h1 class="titulo-principal">Panel administrador</h1>
+    </div>
+  </header>
+
+  <section class="container mt-5 mb-5">
+    <div class="p-4 rounded shadow" style="background: var(--color-tarjeta);">
+      <h2 class="text-center mb-4 titulo-articulo">Gestión básica ✨</h2>
+
+      <p class="mb-3">
+        Aquí el administrador puede revisar la lista de usuarios registrados.
+      </p>
+
+      <div id="lista-usuarios" class="mt-3"></div>
+
+      <button id="btn-cerrar-sesion" class="boton-animado mt-4 w-100">
+        Cerrar sesión 🚪
+      </button>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+    // Proteger solo para admin
+    protegerAdmin();
+
+    const contenedor = document.getElementById("lista-usuarios");
+    const btnCerrar = document.getElementById("btn-cerrar-sesion");
+
+    const usuarios = obtenerUsuarios();
+
+    if (!usuarios.length) {
+      contenedor.textContent = "No hay usuarios registrados.";
+    } else {
+      const lista = document.createElement("ul");
+      lista.classList.add("list-group");
+
+      usuarios.forEach(u => {
+        const li = document.createElement("li");
+        li.classList.add("list-group-item");
+        li.textContent = `${u.nombre} (${u.usuario}) - ${u.correo} [${u.rol}]`;
+        lista.appendChild(li);
+      });
+
+      contenedor.appendChild(lista);
+    }
+
+    btnCerrar.addEventListener("click", () => cerrarSesion());
+  </script>
+</body>
+</html>
