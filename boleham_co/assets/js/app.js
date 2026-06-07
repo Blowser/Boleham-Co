@@ -96,6 +96,7 @@ function crearSesion(usuario) {
     usuario: usuario.usuario,
     nombre: usuario.nombre,
     rol: usuario.rol,
+    direccion: usuario.direccion || "",
     activa: true
   };
 
