@@ -185,7 +185,29 @@ if (formLogin) {
       return;
     }
 
-    mostrarExito(mensaje, "✔ Sesión iniciada correctamente.");
+    // Buscar usuario real en localStorage
+    const usuarioEncontrado = buscarUsuario(correo, pass);
+
+    if (!usuarioEncontrado) {
+      mostrarError(mensaje, "⚠ Correo o contraseña incorrectos.");
+      return;
+    }
+
+    // Crear sesión real
+    crearSesion(usuarioEncontrado);
+
+    // Mensaje de éxito
+    mostrarExito(mensaje, "✔ Sesión iniciada correctamente ✨");
+
+    // Redirigir según rol
+    setTimeout(() => {
+      if (usuarioEncontrado.rol === "admin") {
+        window.location.href = "admin.html";
+      } else {
+        window.location.href = "mi-perfil.html";
+      }
+    }, 1000);
+
   });
 
   formLogin.addEventListener("reset", () => {
@@ -250,8 +272,42 @@ if (formRegistro) {
       return;
     }
 
+    // Revisar duplicados
+    if (correoExiste(correo)) {
+      mostrarError(mensaje, "⚠ Ya existe un usuario con ese correo.");
+      return;
+    }
+
+    if (usuarioExiste(usuario)) {
+      mostrarError(mensaje, "⚠ Ese nombre de usuario ya está en uso.");
+      return;
+    }
+
+    // Crear objeto usuario
+    const nuevoUsuario = {
+      nombre,
+      usuario,
+      correo,
+      password: pass,
+      rol: "consulta", // todos los registrados son usuarios normales
+      direccion
+    };
+
+    // Guardar en localStorage
+    agregarUsuario(nuevoUsuario);
+
+    // Crear sesión automática
+    crearSesion(nuevoUsuario);
+
+    // Mensaje de éxito
     mostrarExito(mensaje, "✔ Registro exitoso. Bienvenido a Boleham & Co ✨");
-  });
+
+    // Redirigir después de 1 segundo
+    setTimeout(() => {
+      window.location.href = "mi-perfil.html";
+    }, 1000);
+
+      });
 
   formRegistro.addEventListener("reset", () => {
     document.getElementById("mensaje").textContent = "";
