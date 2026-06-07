@@ -186,14 +186,15 @@ function actualizarUsuario(correoOriginal, nuevosDatos) {
 // 8) CERRAR SESIÓN DESDE INDEX.HTML
 // ======================================================================
 function cerrarSesion() {
-  sessionStorage.removeItem("sesionActiva");
-  window.location.href = "sistema-login/login.html";
+  sessionStorage.clear();
+  location = "../sistema-login/login.html";
 }
+
 
 
 /*versión completa, testear luego
 function cerrarSesion() {
-  sessionStorage.removeItem("sesionActiva");
+  sessionStorage.clear();
 
   // Detectar si estamos dentro de /sistema-login/
   const enLoginFolder = window.location.pathname.includes("sistema-login");
