@@ -103,7 +103,7 @@ if (formRecuperar) {
 
     // Redirigir al login
     setTimeout(() => {
-      window.location.href = "login.html";
+      window.location.href = "/boleham_co/sistema-login/login.html";
     }, 1200);
   });
 
