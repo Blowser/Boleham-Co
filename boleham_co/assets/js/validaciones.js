@@ -204,7 +204,7 @@ if (formLogin) {
       if (usuarioEncontrado.rol === "admin") {
         window.location.href = "admin.html";
       } else {
-        window.location.href = "mi-perfil.html";
+              window.location.href = "../mi-cuenta/mi-perfil.html";
       }
     }, 1000);
 
@@ -304,7 +304,7 @@ if (formRegistro) {
 
     // Redirigir después de 1 segundo
     setTimeout(() => {
-      window.location.href = "mi-perfil.html";
+            window.location.href = "../mi-cuenta/mi-perfil.html";
     }, 1000);
 
       });
