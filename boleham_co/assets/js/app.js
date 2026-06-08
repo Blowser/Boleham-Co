@@ -187,7 +187,7 @@ function actualizarUsuario(correoOriginal, nuevosDatos) {
 // ======================================================================
 function cerrarSesion() {
   sessionStorage.clear();
-  location = "../sistema-login/login.html";
+  window.location.href = "../sistema-login/login.html";
 }
 
 
