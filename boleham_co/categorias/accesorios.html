@@ -29,7 +29,25 @@
         <ul>
           <li><a class="link-nav" href="../proximamente.html">Nuestras redes</a></li>
           <li><a class="link-nav" href="../proximamente.html">Contacto</a></li>
-          <li><a class="link-nav" href="../sistema-login/login.html">Registrarse / Iniciar sesión</a></li>
+                    <!-- SALUDO + SESIÓN -->
+          <li>
+            
+
+            <a id="btn-perfil" href="mi-cuenta/mi-perfil.html" class="link-nav" style="display:none;">
+              Mi perfil 👤
+            </a>
+
+            <a id="btn-login" href="sistema-login/login.html" class="link-nav">
+              Iniciar sesión 🔐
+            </a>
+
+            <a id="btn-logout" class="link-nav" style="display:none; cursor:pointer;" onclick="cerrarSesion()">
+              Cerrar sesión 🚪
+            </a>
+
+
+          <h2 id="saludo-usuario" class="text-center mt-4"></h2>
+          </li>
           <li><a class="link-nav" href="../proximamente.html">Ver carrito</a></li>
         </ul>
       </nav>
@@ -159,7 +177,8 @@
     <p class="aviso-derechos">Derechos de autor © 2026 Boleham & Co.</p>
   </footer>
   <!-- SCRIPTS -->
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/sesion-activa.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/sesion-activa.js"></script>
+
 </body>
 </html>
